@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\ProfessorCurso;
 use App\Http\Controllers\Controller;
+use App\Models\Curso;
+use App\Models\Professor;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -30,7 +32,9 @@ class ProfessorCursoController extends Controller
      */
     public function create()
     {
-        return view('professorcursos.formulario');
+        $professores = Professor::select('nome', 'id')->pluck('nome', 'id');
+        $cursos = Curso::select('nome_curso', 'id')->pluck('nome_curso', 'id');
+        return view('professorcurso.formulario', compact('professores', 'cursos'));
     }
 
     /**
@@ -51,10 +55,15 @@ class ProfessorCursoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ProfessorCurso $id)
+    public function show(ProfessorCurso $professorCurso)
     {
-        $professorCurso = ProfessorCurso::findOrFail($id);
-        return view('professorcursos.formulario', compact('professorCurso'));
+        $professorCurso = ProfessorCurso::findOrFail($professorCurso->id);
+        $professores = Professor::select('nome', 'id')->pluck('nome', 'id');
+        $cursos = Curso::select('nome_curso', 'id')->pluck('nome_curso', 'id');
+        return view(
+            'reserva.formulario',
+            compact('professores', 'cursos')
+        );
     }
 
     /**

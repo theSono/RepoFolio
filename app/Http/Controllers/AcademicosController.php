@@ -39,9 +39,9 @@ class AcademicosController extends Controller
         $academico = new Academico();
         $academico->fill($request->all());
         if ($academico->save()) {
-            $request->session()->flash('mensagem_sucesso', "Membro da equipe cadastrado!");
+            $request->session()->flash('mensagem_sucesso', "Acadêmico Cadastrado!");
         } else {
-            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar membro da equipe!');
+            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar Acadêmico!');
         }
         return Redirect::to('equipe/create');
     }

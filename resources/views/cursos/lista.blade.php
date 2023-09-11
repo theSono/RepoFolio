@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         Cursos
-                        <a href="{{ url('equipamentos/create') }}" class="btn btn-success btn-sm float-end">
+                        <a href="{{ url('cursos/create') }}" class="btn btn-success btn-sm float-end">
                             Cadastrar Curso
                         </a>
                     </div>
@@ -20,27 +20,21 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
-                                    <th>Nome</th>
-                                    <th>Descrição</th>
-                                    <th>Marca</th>
-                                    <th>Ano</th>
-                                    <th>Opções</th>
+                                    <th>Nome do Curso</th>
+                                    <th>Descrição do Curso</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($equipamentos as $equipamento)
+                                @forelse ($cursos as $curso)
                                     <tr>
-                                        <td>{{ $equipamento->id }}</td>
-                                        <td>{{ $equipamento->nome_equipamento }}</td>
-                                        <td>{{ $equipamento->descricao }}</td>
-                                        <td>{{ $equipamento->marca }}</td>
-                                        <td>{{ $equipamento->ano }}</td>
+                                        <td>{{ $curso->id }}</td>
+                                        <td>{{ $curso->nome_curso }}</td>
+                                        <td>{{ $curso->descricao_curso }}</td>
                                         <td>
-                                            <a href="{{ url('equipamentos/' . $equipamento->id) }}" class="btn btn-primary btn-sm">
+                                            <a href="{{ url('cursos/' . $curso->id) }}" class="btn btn-primary btn-sm">
                                                 Editar
                                             </a>
-                                            {!! Form::open(['method' => 'DELETE', 'url' => 'equipamentos/' . $equipamento->id, 'style' => 'display:inline']) !!}
+                                            {!! Form::open(['method' => 'DELETE', 'url' => 'cursos/' . $curso->id, 'style' => 'display:inline']) !!}
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                             {!! Form::close() !!}
                                         </td>
@@ -55,7 +49,7 @@
                             </tbody>
                         </table>
                         <div class="pagination justify-content-center">
-                            {{ $equipamentos->links() }}
+                            {{ $cursos->links() }}
                         </div>
                     </div>
                 </div>

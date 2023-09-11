@@ -37,8 +37,7 @@ Route::patch('/equipe/{equipe_id}', [EquipeController::class, 'update']);
 Route::delete('/equipe/{equipe_id}', [EquipeController::class, 'destroy']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/orcamento', [App\Http\Controllers\OrcamentoController::class, 'index'])->name('orcamento');
-//Route::get('/produtos', [App\Http\Controllers\ProdutosController::class, 'index'])->name('produtos');
+
 
 Route::get('/projetos', [App\Http\Controllers\ProjetosController::class, 'index'])->name('projetos');
 Route::get('/projetos/create', [App\Http\Controllers\ProjetosController::class, 'create'])->name('projetos.create');

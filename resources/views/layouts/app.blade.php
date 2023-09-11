@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'AgroMax') }}</title>
+    <title>{{ config('app.name', 'GitCrafters') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -41,14 +41,27 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 7, 213);">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 0, 255);">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(236, 130, 0);">
-                    <img src="{{ asset('uploads/images/casa.jpeg') }}" width="200" alt="...">
+                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(255, 165, 0);">
+                    <img src="{{ asset('uploads/images/images.jpeg') }}" width="200" alt="...">
                 </a>
+
+
+                <a class="navbar-brand" href="{{ url('/equipe') }}">
+                    Equipe
+                </a>
+
+                <a class="navbar-brand" href="{{ url('/projetos') }}">
+                    Projetos
+                </a>
+
+                @auth
+
                 <a class="navbar-brand" href="{{ url('/academicos') }}">
                     Acadêmicos
                 </a>
+
                 <a class="navbar-brand" href="{{ url('/cursos') }}">
                     Cursos
                 </a>
@@ -56,20 +69,18 @@
                     Niveis
                 </a>
                 <a class="navbar-brand" href="{{ url('/professor_curso') }}">
-                    Professor/Curso
+                    Professor de cada Curso
                 </a>
                 <a class="navbar-brand" href="{{ url('/professores') }}">
                     Professores
                 </a>
-                <a class="navbar-brand" href="{{ url('/projetos') }}">
-                    Projetos
-                </a>
                 <a class="navbar-brand" href="{{ url('/users') }}">
                     Usuarios
                 </a>
-                <a class="navbar-brand" href="{{ url('/usuariao_nivel') }}">
-                    Usuario/Nivel
+                <a class="navbar-brand" href="{{ url('/usuario_nivel') }}">
+                    Nivel dos Usuarios
                 </a>
+                @endauth
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

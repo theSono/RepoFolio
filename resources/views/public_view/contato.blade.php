@@ -30,7 +30,7 @@
     }
 
     #app {
-        background-color: white
+        background-color: rgb(255, 255, 255)
     }
 
     .image-container {
@@ -70,33 +70,31 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="image-container mt-3">
-                        <img src="{{ asset('uploads/images/régua.jpg') }}" alt="Imagem Menor 1"
+                        <img src="{{ asset('uploads/images/1.png') }}" alt="Imagem Menor 1"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h1 class="display-5">Fertilizantes</h1>
-                            <p class="lead">Nutrindo a terra para colheitas abundantes.</p>
+                            <h1 class="display-5">PROJETOS</h1>
+                            <p class="lead">DESC PROJETO</p>
                         </div>
                     </div>
 
                     <div class="image-container mt-3 mb-3">
-                        <img src="{{ asset('uploads/images/régua.jpg') }}" alt="Imagem Menor 2"
+                        <img src="{{ asset('uploads/images/2.png') }}" alt="Imagem Menor 2"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h2>Grãos e sementes</h2>
-                            <p class="lead">Semeando sucesso, colhendo prosperidade: Grãos e Sementes da mais
-                                alta qualidade.</p>
+                            <h2>PROJETOS</h2>
+                            <p class="lead">DESC PROJETO</p>
                         </div>
                     </div>
 
                 </div>
                 <div class="col-lg-8">
                     <div class="image-container mb-3">
-                        <img src="{{ asset('uploads/images/régua.jpg') }}" alt="Imagem Menor 1"
+                        <img src="{{ asset('uploads/images/3.png') }}" alt="Imagem Menor 1"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h1 class="display-5">Equipamentos Agrícolas</h1>
-                            <p class="lead">Colheita de Eficiência: Equipamentos agrícolas que impulsionam seus
-                                resultados.</p>
+                            <h1 class="display-5">PROJETOS</h1>
+                            <p class="lead">DESC PROJETO</p>
                         </div>
                     </div>
                 </div>
@@ -110,11 +108,9 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <p class="lead card-text">
-                                Seja você um agricultor experiente, um empresário agrícola ou apenas alguém interessado
-                                em adentrar no mundo do agronegócio, a AgroMax está aqui para atender todas as suas
-                                necessidades. Somos uma empresa dedicada a simplificar e aprimorar suas operações no
-                                campo, fornecendo acesso fácil e conveniente a orçamentos precisos de produtos
-                                agrícolas, equipamentos, grãos e fertilizantes.</p>
+                                Gerencie seus projetos com eficiência e segurança! Apresentamos nosso
+                                programa de repositório de projetos. Com ele, seus projetos estarão todos
+                                em um só lugar e acessíveis a qualquer momento.</p>
                         </div>
                     </div>
                 </div>
@@ -122,14 +118,14 @@
         </div>
 
         <div class="container mt-3" id="porque">
-            <h2 class="mb-4">Por que Escolher a AgroMax?</h2>
+            <h2 class="mb-4">Por que Escolher a GitCrafters?</h2>
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                Precisão e Transparência:
+                                Centralização
                             </button>
                         </h5>
                     </div>
@@ -137,9 +133,12 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Na AgroMax, acreditamos que a precisão é essencial para o sucesso no agronegócio. Nossa
-                            plataforma foi projetada para fornecer orçamentos precisos e transparentes, permitindo que
-                            você tome decisões informadas para suas operações agrícolas.
+                            Nosso repositório de
+                            projetos é uma plataforma
+                            online que centraliza as
+                            informações e arquivos
+                            relacionados a um projeto
+                            em um só lugar.
                         </div>
                     </div>
                 </div>
@@ -148,15 +147,13 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Variedade de Produtos
+                                Colaboração
                             </button>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
-                            Oferecemos uma ampla gama de produtos agrícolas, equipamentos de última geração, grãos de
-                            alta qualidade e fertilizantes eficazes. Você encontrará tudo o que precisa em um único
-                            lugar, economizando tempo e esforço na busca por fornecedores confiáveis.
+                            Permite que todas as pessoas envolvidas no projeto possam visualizar e editar os arquivos em tempo real.
                         </div>
                     </div>
                 </div>
@@ -165,16 +162,18 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Atendimento Personalizado
+                                Organização
                             </button>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Na AgroMax, valorizamos o relacionamento com nossos clientes. Nossa equipe dedicada está
-                            sempre pronta para auxiliá-lo, oferecendo orientações especializadas e respondendo a todas
-                            as suas perguntas.
+                            Mantém todos os arquivos
+                            relacionados a um projeto em
+                            um só lugar, garantindo que
+                            nada fique perdido ou
+                            desorganizado.
                         </div>
                     </div>
                 </div>
@@ -183,15 +182,19 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Eficiência e Agilidade
+                                Produtividade
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Nosso sistema de orçamento online é rápido e eficiente, permitindo que você receba cotações
-                            em tempo hábil, para que possa planejar suas compras com antecedência.
+                            Permite que várias pessoas
+                            trabalhem no mesmo projeto
+                            ao mesmo tempo e visualizem
+                            as alterações em tempo real,
+                            aumentando a produtividade.
+
                         </div>
                     </div>
                 </div>
@@ -200,15 +203,17 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Compromisso com a Qualidade
+                                Segurança
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Trabalhamos apenas com os melhores fornecedores e produtos, garantindo que você obtenha
-                            qualidade superior em cada transação.
+                            Garante que os arquivos
+                            estejam seguros em um
+                            ambiente online protegido por
+                            senhas
                         </div>
                     </div>
                 </div>
@@ -218,12 +223,12 @@
         <div class="container mt-5">
             <div class="row">
                 <section class="mb-5" id="equipe">
-                    <h2 class="mb-4">Equipe AgroMax</h2>
+                    <h2 class="mb-4">Equipe GitCrafters</h2>
                     <div class="row">
                         @forelse ($equipe as $equipe)
                         <div class="col-md-4">
                             <div class="card d-flex flex-column h-100">
-                                <img src="{{ asset('uploads/images/equipe/' . $equipe->foto) }}"
+                                <img src="{{ asset('uploads/images/' . $equipe->foto) }}"
                                     class="card-img-top img-fluid" alt="{{ $equipe->nome }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $equipe->nome }}</h5>
@@ -238,9 +243,11 @@
                         @endforelse
                     </div>
                 </section>
-                <h2 class="mb-4 text-center">Faça já um orçamento especializado!</h2>
-                <button type="button" class="btn btn-success btn-lg btn-block shadow-lg p-3 mb-5 rounded">Fazer
-                    Orçamento!</button>
+                <h2 class="mb-4 text-center">Faça já o seu Projeto!</h2>
+                <button type="button" class="btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5 rounded">
+                    Fazer Projeto!
+                </button>
+
             </div>
 
         </div>
@@ -286,8 +293,8 @@
                         ]) !!}
                     </div>
 
-                    <div class="form-group">
-                        {!! Form::submit('Enviar', ['class' => 'form-control btn btn-success mt-2']) !!}
+                    <div class="form-group" style="background-color: #007BFF;"> <!-- Fundo azul com a cor hex #007BFF -->
+                        {!! Form::submit('Enviar', ['class' => 'form-control btn mt-2']) !!}
                     </div>
                 </div>
             </div>
@@ -311,9 +318,9 @@
 
     // Exemplo de código PHP para exibir o footer dinamicamente
     $anoAtual = date('Y');
-    $nomeEmpresa = 'AgroMax+';
+    $nomeEmpresa = 'GitCrafters';
     $endereco = '123 Rua Principal, Cidade, Estado';
-    $emailContato = 'contato@agromax.com';
+    $emailContato = 'contato@gitcrafters.com';
     $telefoneContato = '+55 123 456 7890';
     use App\Http\Controllers\ResumosController;
     ?>
@@ -348,7 +355,7 @@
                     </li>
                     <li>
                         <a class="navbar-brand nav-link" href="#porque">
-                            Escolha a Agromax
+                            Escolha a GitCrafters
                         </a>
                     </li>
                     <li>
@@ -367,8 +374,8 @@
         <div class="d-flex justify-content-center align-items-center">
             <a class="navbar-brand text-center" href="{{ url('/home') }}">
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(160, 228, 176);">
-                        <img src="{{ asset('uploads/images/logo/agromax-removebg.png') }}" width="200" alt="...">
+                    <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(0, 0, 255);">
+                        <img src="{{ asset('uploads/images/images.jpeg') }}" width="100" alt="...">
                     </a>
                 </div>
             </a>

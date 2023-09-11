@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Equipamentos
-                        <a href="{{ url('equipamentos/create') }}" class="btn btn-success btn-sm float-end">
-                            Cadastrar Equipamento
+                        Lista de Niveis
+                        <a href="{{ url('niveis/create') }}" class="btn btn-success btn-sm float-end">
+                            Cadastrar Nivel
                         </a>
                     </div>
                     <div class="card-body">
@@ -20,27 +20,19 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
                                     <th>Nome</th>
-                                    <th>Descrição</th>
-                                    <th>Marca</th>
-                                    <th>Ano</th>
-                                    <th>Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($equipamentos as $equipamento)
+                                @forelse ($niveis as $nivel)
                                     <tr>
-                                        <td>{{ $equipamento->id }}</td>
-                                        <td>{{ $equipamento->nome_equipamento }}</td>
-                                        <td>{{ $equipamento->descricao }}</td>
-                                        <td>{{ $equipamento->marca }}</td>
-                                        <td>{{ $equipamento->ano }}</td>
+                                        <td>{{ $nivel->id }}</td>
+                                        <td>{{ $nivel->nome }}</td>
                                         <td>
-                                            <a href="{{ url('equipamentos/' . $equipamento->id) }}" class="btn btn-primary btn-sm">
+                                            <a href="{{ url('niveis/' . $nivel->id) }}" class="btn btn-primary btn-sm">
                                                 Editar
                                             </a>
-                                            {!! Form::open(['method' => 'DELETE', 'url' => 'equipamentos/' . $equipamento->id, 'style' => 'display:inline']) !!}
+                                            {!! Form::open(['method' => 'DELETE', 'url' => 'niveis/' . $nivel->id, 'style' => 'display:inline']) !!}
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                             {!! Form::close() !!}
                                         </td>
@@ -55,7 +47,7 @@
                             </tbody>
                         </table>
                         <div class="pagination justify-content-center">
-                            {{ $equipamentos->links() }}
+                            {{ $niveis->links() }}
                         </div>
                     </div>
                 </div>

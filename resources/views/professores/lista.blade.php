@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Equipamentos
-                        <a href="{{ url('equipamentos/create') }}" class="btn btn-success btn-sm float-end">
-                            Cadastrar Equipamento
+                        Lista de Professores
+                        <a href="{{ url('professores/create') }}" class="btn btn-success btn-sm float-end">
+                            Cadastrar Professor
                         </a>
                     </div>
                     <div class="card-body">
@@ -29,18 +29,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($equipamentos as $equipamento)
+                                @forelse ($professores as $professor)
                                     <tr>
-                                        <td>{{ $equipamento->id }}</td>
-                                        <td>{{ $equipamento->nome_equipamento }}</td>
-                                        <td>{{ $equipamento->descricao }}</td>
-                                        <td>{{ $equipamento->marca }}</td>
-                                        <td>{{ $equipamento->ano }}</td>
+                                        <td>{{ $professor->id }}</td>
+                                        <td>{{ $professor->nome_equipamento }}</td>
+                                        <td>{{ $professor->descricao }}</td>
+                                        <td>{{ $professor->marca }}</td>
+                                        <td>{{ $professor->ano }}</td>
                                         <td>
-                                            <a href="{{ url('equipamentos/' . $equipamento->id) }}" class="btn btn-primary btn-sm">
+                                            <a href="{{ url('professores/' . $professor->id) }}" class="btn btn-primary btn-sm">
                                                 Editar
                                             </a>
-                                            {!! Form::open(['method' => 'DELETE', 'url' => 'equipamentos/' . $equipamento->id, 'style' => 'display:inline']) !!}
+                                            {!! Form::open(['method' => 'DELETE', 'url' => 'professores/' . $professor->id, 'style' => 'display:inline']) !!}
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                             {!! Form::close() !!}
                                         </td>
@@ -55,7 +55,7 @@
                             </tbody>
                         </table>
                         <div class="pagination justify-content-center">
-                            {{ $equipamentos->links() }}
+                            {{ $professores->links() }}
                         </div>
                     </div>
                 </div>

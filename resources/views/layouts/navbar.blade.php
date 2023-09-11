@@ -41,21 +41,20 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(160, 228, 176);">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 0, 255);">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(160, 228, 176);">
-                    <img src="{{ asset('uploads/images/logo/agromax-removebg.png') }}" width="200" alt="...">
+                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(255, 165, 0);">
+                    <img src="{{ asset('uploads/images/images.jpeg') }}" width="100" alt="...">
                 </a>
 
                 <a class="navbar-brand nav-link" href="#sobre">
                     Sobre
                 </a>
+
                 <a class="navbar-brand nav-link" href="#equipe">
                     Equipe
                 </a>
-                <a class="navbar-brand nav-link" href="#orcamento">
-                    Faça um Projeto
-                </a>
+
                 <a class="navbar-brand nav-link" href="#contato">
                     Contato
                 </a>

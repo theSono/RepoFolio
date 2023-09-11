@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Lista de Reservas
-                        <a href="{{ url('reserva/create') }}" class="btn btn-success btn-sm float-end">
-                            Nova Reserva
+                        Lista de Professores de Cada Cursoo
+                        <a href="{{ url('professor_curso/create') }}" class="btn btn-success btn-sm float-end">
+                            Nova Atribuição
                         </a>
                     </div>
                     <div class="card-body">
@@ -20,31 +20,22 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
-                                    <th>Equipamento</th>
-                                    <th>Local</th>
-                                    <th>Cliente</th>
-                                    <th>Data</th>
-                                    <th>Horario</th>
-                                    <th>Data de Devolução</th>
-                                    <th>Opções</th>
+                                    <th>Professor</th>
+                                    <th>Curso</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($reservas as $reserva)
+                                @forelse ($professor_curso as $professor_curso)
                                     <tr>
-                                        <td>{{ $reserva->id }}</td>
-                                        <td>{{ $reserva->equipamento->nome }}</td>
-                                        <td>{{ $reserva->local->nome }}</td>
-                                        <td>{{ $reserva->cliente->nome }}</td>
-                                        <td>{{ $reserva->data }}</td>
-                                        <td>{{ $reserva->horario }}</td>
-                                        <td>{{ $reserva->devolucao }}</td>
+                                        <td>{{ $professor_curso->id }}</td>
+                                        <td>{{ $professor_curso->professor_id->nome }}</td>
+                                        <td>{{ $professor_curso->cursos_id->nome_curso }}</td>
+
                                         <td>
-                                            <a href="{{ url('reserva/' . $reserva->id) }}" class="btn btn-primary btn-sm">
+                                            <a href="{{ url('professor_curso/' . $professor_curso->id) }}" class="btn btn-primary btn-sm">
                                                 Editar
                                             </a>
-                                            {!! Form::open(['method' => 'DELETE', 'url' => 'reserva/' . $reserva->id, 'style' => 'display:inline']) !!}
+                                            {!! Form::open(['method' => 'DELETE', 'url' => 'professor_curso/' . $professor_curso->id, 'style' => 'display:inline']) !!}
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                             {!! Form::close() !!}
                                         </td>
@@ -59,7 +50,7 @@
                             </tbody>
                         </table>
                         <div class="pagination justify-content-center">
-                            {{ $reservas->links() }}
+                            {{ $professor_curso->links() }}
                         </div>
                     </div>
                 </div>
