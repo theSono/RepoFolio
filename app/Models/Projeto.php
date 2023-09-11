@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Projeto extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['curso', 'descricao', 'objetivo'];
 }

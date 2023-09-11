@@ -9,5 +9,5 @@ class Academico extends Model
 {
     use HasFactory;
 
-
+    protected $fillable = ['nome', 'matricula', 'curso'];
 }

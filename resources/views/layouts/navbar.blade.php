@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'AgroMax') }}</title>
+    <title>{{ config('app.name', 'RepoFolio') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -41,34 +41,23 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 7, 213);">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(160, 228, 176);">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(236, 130, 0);">
-                    <img src="{{ asset('uploads/images/casa.jpeg') }}" width="200" alt="...">
+                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(160, 228, 176);">
+                    <img src="{{ asset('uploads/images/logo/agromax-removebg.png') }}" width="200" alt="...">
                 </a>
-                <a class="navbar-brand" href="{{ url('/academicos') }}">
-                    Acadêmicos
+
+                <a class="navbar-brand nav-link" href="#sobre">
+                    Sobre
                 </a>
-                <a class="navbar-brand" href="{{ url('/cursos') }}">
-                    Cursos
+                <a class="navbar-brand nav-link" href="#equipe">
+                    Equipe
                 </a>
-                <a class="navbar-brand" href="{{ url('/niveis') }}">
-                    Niveis
+                <a class="navbar-brand nav-link" href="#orcamento">
+                    Faça um Projeto
                 </a>
-                <a class="navbar-brand" href="{{ url('/professor_curso') }}">
-                    Professor/Curso
-                </a>
-                <a class="navbar-brand" href="{{ url('/professores') }}">
-                    Professores
-                </a>
-                <a class="navbar-brand" href="{{ url('/projetos') }}">
-                    Projetos
-                </a>
-                <a class="navbar-brand" href="{{ url('/users') }}">
-                    Usuarios
-                </a>
-                <a class="navbar-brand" href="{{ url('/usuariao_nivel') }}">
-                    Usuario/Nivel
+                <a class="navbar-brand nav-link" href="#contato">
+                    Contato
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -79,45 +68,29 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('login'))
+                        @auth
+                        <li class="nav-item">
+                            <a href="{{ url('/home') }}" class="navbar-brand">Home</a>
+                        </li>
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                        <li class="nav-item">
+                            <a href="{{ route('login') }}" class="navbar-brand">Entrar</a>
+                        </li>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a href="{{ route('register') }}" class="navbar-brand">Cadastrar</a>
+                        </li>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                        @endif
+                        @endauth
+                        @endif
                     </ul>
                 </div>
             </div>
