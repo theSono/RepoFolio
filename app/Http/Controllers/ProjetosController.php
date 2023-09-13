@@ -69,9 +69,9 @@ class ProjetosController extends Controller
         $projeto->fill($request->all());
         $projeto->foto = $nomeArquivo;
         if ($projeto->save()) {
-            $request->session()->flash('mensagem_sucesso', "Membro da projeto cadastrado!");
+            $request->session()->flash('mensagem_sucesso', "Projeto cadastrado!");
         } else {
-            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar membro da projeto!');
+            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar projeto!');
         }
         return Redirect::to('projeto/create');
         //

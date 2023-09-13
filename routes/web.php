@@ -29,6 +29,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'exibirViewPublica']);
+
 Route::get('/equipe', [App\Http\Controllers\EquipeController::class, 'index'])->name('equipes');
 Route::get('/equipe/create', [EquipeController::class, 'create'])->name('equipe.create');
 Route::get('/equipe/{id}', [EquipeController::class, 'show'])->name('equipe.show');

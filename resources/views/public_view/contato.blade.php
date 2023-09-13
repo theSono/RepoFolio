@@ -228,7 +228,7 @@
                         @forelse ($equipe as $equipe)
                         <div class="col-md-4">
                             <div class="card d-flex flex-column h-100">
-                                <img src="{{ asset('uploads/images/' . $equipe->foto) }}"
+                                <img src="{{ asset('uploads/images/equipe/' . $equipe->foto) }}"
                                     class="card-img-top img-fluid" alt="{{ $equipe->nome }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $equipe->nome }}</h5>
