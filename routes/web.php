@@ -38,7 +38,6 @@ Route::delete('/equipe/{equipe_id}', [EquipeController::class, 'destroy']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::get('/projetos', [App\Http\Controllers\ProjetosController::class, 'index'])->name('projetos');
 Route::get('/projetos/create', [App\Http\Controllers\ProjetosController::class, 'create'])->name('projetos.create');
 Route::get('/projetos/{id}', [ProjetosController::class, 'show'])->name('projetos.show');
