@@ -19,6 +19,7 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
+                                    <th>Código</th>
                                     <th>Nome</th>
                                     <th>Matricula</th>
                                     <th>Curso</th>
@@ -43,7 +44,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="3">
-                                            Não há membros para listar!
+                                            Não há acadêmicos para listar!
                                         </td>
                                     </tr>
                                 @endforelse
