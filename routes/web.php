@@ -45,6 +45,7 @@ Route::post('/projetos', [ProjetosController::class, 'store']);
 Route::patch('/projetos/{projetos_id}', [ProjetosController::class, 'update']);
 Route::delete('/projetos/{projetos_id}', [ProjetosController::class, 'destroy']);
 
+
 Route::get('/academicos', [App\Http\Controllers\AcademicosController::class, 'index'])->name('academicos');
 Route::get('/academicos/create', [App\Http\Controllers\AcademicosController::class, 'create'])->name('academicos.create');
 Route::get('/academicos/{id}', [AcademicosController::class, 'show'])->name('academicos.show');
