@@ -7,50 +7,44 @@
                 <div class="card">
                     <div class="card-header">
                         Dados do Projeto
-                        <a href="{{ url('projeto') }}" class="btn btn-success btn-sm float-end">
+                        <a href="{{ url('projetos') }}" class="btn btn-success btn-sm float-end">
                             Listar Projetos
                         </a>
                     </div>
                     <div class="card-body">
-                        @if(Session::has('mensagem_sucesso'))
+                        @if (Session::has('mensagem_sucesso'))
                             <div class="alert alert-success">
                                 {{ Session::get('mensagem_sucesso') }}
                             </div>
                         @endif
-                        @if(Session::has('mensagem_erro'))
+                        @if (Session::has('mensagem_erro'))
                             <div class="alert alert-danger">
                                 {{ Session::get('mensagem_erro') }}
                             </div>
                         @endif
 
-                        @if(Route::is('projeto.show'))
-                            {!! Form::model($projeto,
-                                            ['method'=>'PATCH',
-                                            'files' => 'True',
-                                            'url'=>'projeto/'.$projeto->id]) !!}
-
+                        @if (Route::is('projeto.show'))
+                            {!! Form::model($projeto, ['method' => 'PATCH', 'files' => 'True', 'url' => 'projeto/' . $projeto->id]) !!}
                             <div class="text-center">
-                                <img
-                                    src="{{ url('/') }}/uploads/projeto/{{ $projeto->anexos }}"
-                                    alt="{{ $projeto->titulo }}"
-                                    title="{{ $projeto->titulo }}"
-                                    class="img-thumbnail"
-                                    width="150"/>
+                                <img src="{{ url('/') }}/uploads/images/anexos/{{ $projeto->anexos }}"
+                                    alt="{{ $projeto->anexos }}" title="{{ $projeto->anexos }}" class="img-thumbnail"
+                                    width="150" />
                             </div>
                         @else
-                            {!! Form::open(['method'=>'POST', 'files' => 'True', 'url'=>'projeto']) !!}
+                            {!! Form::open(['method' => 'POST', 'files' => 'True', 'url' => 'projeto']) !!}
                         @endif
-                        {!! Form::label('titulo', 'Título') !!}
-                        {!! Form::input('text', 'titulo',
-                                        null,
-                                        ['class'=>'form-control',
-                                         'placeholder'=>'Título',
-                                         'required',
-                                         'maxlength'=>50,
-                                         'autofocus']) !!}
 
-                        {!! Form::label('orgaos_proponentes', 'Órgãos Proponentes') !!}
-                        {!! Form::input('text', 'orgaos_proponentes', null, [
+                        {!! Form::label('titulo', 'Titulo do Projeto') !!}
+                        {!! Form::input('text', 'titulo', null, [
+                            'class' => 'form-control',
+                            'placeholder' => 'Titulo do Projeto',
+                            'required',
+                            'maxlength' => 150,
+                            'autofocus',
+                        ]) !!}
+
+                        {!! Form::label('orgaoes_proponentes', 'Órgãos Proponentes') !!}
+                        {!! Form::input('text', 'orgaoes_proponentes', null, [
                             'class' => 'form-control',
                             'placeholder' => 'Órgãos Proponentes',
                             'required',
@@ -98,7 +92,7 @@
                         ]) !!}
 
                         {!! Form::label('resumo_projeto', 'Resumo do Projeto') !!}
-                        {!! Form::input('text', 'resumo_projeto', null, [
+                        {!! Form::input('text', 'coordenacao_orientacao', null, [
                             'class' => 'form-control',
                             'placeholder' => 'Resumo do Projeto',
                             'required',
@@ -166,8 +160,7 @@
                         {!! Form::file('anexos',
                                         ['class'=>'form-control btn-sm']) !!}
 
-                        {!! Form::submit('Salvar',
-                                        ['class'=>'float-end btn btn-primary mt-3']) !!}
+                        {!! Form::submit('Salvar', ['class' => 'float-end btn btn-primary mt-3']) !!}
                         {!! Form::close() !!}
                     </div>
                 </div>

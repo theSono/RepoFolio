@@ -6,9 +6,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Lista de Niveis
-                        <a href="{{ url('niveis/create') }}" class="btn btn-success btn-sm float-end">
-                            Cadastrar Nivel
+                        Niveis
+                        <a href="{{ url('niveis/create') }}" class="btn btn-success btn-sm float-end"> Cadastrar Nivel
                         </a>
                     </div>
                     <div class="card-body">
@@ -20,6 +19,7 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
+                                    <th>Código</th>
                                     <th>Nome</th>
                                 </tr>
                             </thead>
@@ -40,7 +40,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="3">
-                                            Não há membros para listar!
+                                            Não há niveis para listar!
                                         </td>
                                     </tr>
                                 @endforelse

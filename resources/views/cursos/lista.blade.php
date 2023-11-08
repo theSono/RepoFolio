@@ -20,6 +20,7 @@
                         <table class="table table-sm table-hover table-bordered">
                             <thead>
                                 <tr>
+                                    <th>Código</th>
                                     <th>Nome do Curso</th>
                                     <th>Descrição do Curso</th>
                                 </tr>

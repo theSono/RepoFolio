@@ -65,67 +65,80 @@
 </style>
 
 <body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <h2 class="card-title mb-3"><strong>GitCrafters Apresenta: RepoFolio</strong></h2>
+            <div class="col-md-12" id="sobre">
+                <div class="card mb-4">
+                    <div class="card-body" style="text-align: justify;">
+                        <p class="lead card-text">
+                            A GitCrafters uma equipe apaixonada em simplificar o gerenciamento de projetos.
+                            Com anos de experiência, desenvolvemos repositórios de projetos intuitivos e eficazes que capacitam
+                            equipes a colaborar, armazenar e acompanhar projetos com facilidade.
+                            Nossa missão é fornecer soluções inovadoras e seguras para impulsionar o sucesso dos nossos clientes.
+                            Confie em nós para a gestão inteligente de projetos.
+                        </p>
+                        <p class="lead card-text">
+                            RepoFolio o seu repositório de projetos simples e moderno!
+                            Gerencie seus projetos com eficiência e segurança! Apresentamos nosso programa de repositório de projetos.
+                            Com ele, seus projetos estarão todos em um só lugar e acessíveis a qualquer momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="app">
         <div class="container mt-3">
             <div class="row">
+                <h2 class="card-title mb-3"><strong>PROJETOS DESENVOLVIDOS</strong></h2>
                 <div class="col-lg-4">
                     <div class="image-container mt-3">
-                        <img src="{{ asset('uploads/images/1.png') }}" alt="Imagem Menor 1"
+                        <img src="{{ asset('uploads/projeto/1.PNG') }}" alt="Imagem Menor 1"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h1 class="display-5">PROJETOS</h1>
-                            <p class="lead">DESC PROJETO</p>
+                            <h1 class="display-5">PROJETO 1</h1>
+                            <p class="lead">DESC</p>
                         </div>
                     </div>
 
                     <div class="image-container mt-3 mb-3">
-                        <img src="{{ asset('uploads/images/2.png') }}" alt="Imagem Menor 2"
+                        <img src="{{ asset('uploads/projeto/2.png') }}" alt="Imagem Menor 2"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h2>PROJETOS</h2>
-                            <p class="lead">DESC PROJETO</p>
+                            <h2>PROJETO 1</h2>
+                            <p class="lead">DESC</p>
                         </div>
                     </div>
 
                 </div>
                 <div class="col-lg-8">
                     <div class="image-container mb-3">
-                        <img src="{{ asset('uploads/images/3.png') }}" alt="Imagem Menor 1"
+                        <img src="{{ asset('uploads/projeto/3.png') }}" alt="Imagem Menor 1"
                             class="img-fluid rounded">
                         <div class="image-overlay rounded">
-                            <h1 class="display-5">PROJETOS</h1>
-                            <p class="lead">DESC PROJETO</p>
+                            <h1 class="display-5">PROJETO 1</h1>
+                            <p class="lead">DESC</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container mt-5">
-            <div class="row">
-                <h2 class="card-title mb-3">Sobre nós</h2>
-                <div class="col-md-12" id="sobre">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <p class="lead card-text">
-                                Gerencie seus projetos com eficiência e segurança! Apresentamos nosso
-                                programa de repositório de projetos. Com ele, seus projetos estarão todos
-                                em um só lugar e acessíveis a qualquer momento.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <div class="container mt-3" id="porque">
-            <h2 class="mb-4">Por que Escolher a GitCrafters?</h2>
+            <h2 class="mb-4"><strong>O que o RepoFolio proporciona?</strong></h2>
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                Centralização
+                                Centralização:
                             </button>
                         </h5>
                     </div>
@@ -133,12 +146,8 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Nosso repositório de
-                            projetos é uma plataforma
-                            online que centraliza as
-                            informações e arquivos
-                            relacionados a um projeto
-                            em um só lugar.
+                            Nosso repositório de projetos é uma plataforma online que centraliza as informações e
+                            arquivos relacionados a um projeto em um só lugar.
                         </div>
                     </div>
                 </div>
@@ -147,13 +156,14 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Colaboração
+                                Colaboração:
                             </button>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
-                            Permite que todas as pessoas envolvidas no projeto possam visualizar e editar os arquivos em tempo real.
+                            Permite que todas as pessoas envolvidas no projeto possam visualizar
+                            e editar os arquivos em tempo real.
                         </div>
                     </div>
                 </div>
@@ -162,18 +172,15 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Organização
+                                Organização:
                             </button>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Mantém todos os arquivos
-                            relacionados a um projeto em
-                            um só lugar, garantindo que
-                            nada fique perdido ou
-                            desorganizado.
+                            Mantém todos os arquivos relacionados a um projeto em um só lugar,
+                            garantindo que nada fique perdido ou desorganizado.
                         </div>
                     </div>
                 </div>
@@ -182,19 +189,15 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Produtividade
+                                Produtividade:
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Permite que várias pessoas
-                            trabalhem no mesmo projeto
-                            ao mesmo tempo e visualizem
-                            as alterações em tempo real,
-                            aumentando a produtividade.
-
+                            Permite que várias pessoas trabalhem no mesmo projeto ao mesmo tempo e
+                            visualizem as alterações em tempo real, aumentando a produtividade.
                         </div>
                     </div>
                 </div>
@@ -203,17 +206,15 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Segurança
+                                Segurança:
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Garante que os arquivos
-                            estejam seguros em um
-                            ambiente online protegido por
-                            senhas
+                            Garante que os arquivos estejam seguros em um ambiente online protegido
+                            por senhas e sistemas de criptografia.
                         </div>
                     </div>
                 </div>
@@ -223,9 +224,9 @@
         <div class="container mt-5">
             <div class="row">
                 <section class="mb-5" id="equipe">
-                    <h2 class="mb-4">Equipe GitCrafters</h2>
+                    <h2 class="mb-4"><strong>Equipe GitCrafters</strong></h2>
                     <div class="row">
-                        @forelse ($equipe as $equipe)
+                        @forelse ($equipes as $equipe)
                         <div class="col-md-4">
                             <div class="card d-flex flex-column h-100">
                                 <img src="{{ asset('uploads/images/equipe/' . $equipe->foto) }}"
@@ -243,20 +244,17 @@
                         @endforelse
                     </div>
                 </section>
-                <h2 class="mb-4 text-center">Faça já o seu Projeto!</h2>
-                <button type="button" class="btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5 rounded">
-                    Fazer Projeto!
-                </button>
-
+                <!-- <h2 class="mb-4 text-center">Faça já seu projeto!</h2>
+                <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg p-3 mb-5 rounded">Fazer Projeto!</button>-->
             </div>
 
         </div>
 
         <div class="container mt-3" id="contato">
-            <h2 class="card-title mt-5 mb-3">Entre em contato conosco</h2>
+            <h2 class="card-title mt-5 mb-3"><strong>Entre em contato conosco</strong></h2>
             <div class="card">
                 <div class="card-body">
-                    <p class="lead">Qual a sua dúvida?</p>
+                    <p class="lead">Preencha com seus Dados</p>
                     @if (Session::has('mensagem_sucesso'))
                     <div class="alert alert-sucess">
                         {{ Session::get('mensagem_sucesso') }}
@@ -293,8 +291,8 @@
                         ]) !!}
                     </div>
 
-                    <div class="form-group" style="background-color: #007BFF;"> <!-- Fundo azul com a cor hex #007BFF -->
-                        {!! Form::submit('Enviar', ['class' => 'form-control btn mt-2']) !!}
+                    <div class="form-group">
+                        {!! Form::submit('Enviar', ['class' => 'form-control btn btn-warning mt-2']) !!}
                     </div>
                 </div>
             </div>
@@ -319,9 +317,9 @@
     // Exemplo de código PHP para exibir o footer dinamicamente
     $anoAtual = date('Y');
     $nomeEmpresa = 'GitCrafters';
-    $endereco = '123 Rua Principal, Cidade, Estado';
-    $emailContato = 'contato@gitcrafters.com';
-    $telefoneContato = '+55 123 456 7890';
+    $endereco = 'FAMPER';
+    $emailContato = 'GitCrafters@famper.com';
+    $telefoneContato = '+55 999 999 9999';
     use App\Http\Controllers\ResumosController;
     ?>
 
@@ -341,7 +339,7 @@
                 </p>
             </div>
             <div class="col-md-6 mt-3">
-                <h5>Descubra nossas possibilidades</h5>
+                <h5>Tópicos</h5>
                 <ul>
                     <li>
                         <a class="navbar-brand nav-link" href="#sobre">
@@ -350,7 +348,7 @@
                     </li>
                     <li>
                         <a class="navbar-brand nav-link" href="#orcamento">
-                            Orçamento
+                            Projetos
                         </a>
                     </li>
                     <li>
@@ -364,9 +362,6 @@
                         </a>
                     </li>
 
-
-
-
                 </ul>
 
             </div>
@@ -374,8 +369,8 @@
         <div class="d-flex justify-content-center align-items-center">
             <a class="navbar-brand text-center" href="{{ url('/home') }}">
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(0, 0, 255);">
-                        <img src="{{ asset('uploads/images/images.jpeg') }}" width="100" alt="...">
+                    <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb (255, 165, 0);">
+                        <img src="{{ asset('uploads/images/imagesssss.png') }}" width="200" alt="...">
                     </a>
                 </div>
             </a>

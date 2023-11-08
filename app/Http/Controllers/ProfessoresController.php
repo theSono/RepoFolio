@@ -6,7 +6,7 @@ use App\Models\Professor;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Redirect;
 
-class ProfessorController extends Controller
+class ProfessoresController extends Controller
 {
     /**
      * Display a listing of the resource.

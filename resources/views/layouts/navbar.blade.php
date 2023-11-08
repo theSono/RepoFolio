@@ -41,10 +41,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 0, 255);">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(255, 165, 0);">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(255, 165, 0);">
-                    <img src="{{ asset('uploads/images/images.jpeg') }}" width="100" alt="...">
+                    <img src="{{ asset('uploads/images/imagesssss.png') }}" width="100" alt="...">
                 </a>
 
                 <a class="navbar-brand nav-link" href="#sobre">

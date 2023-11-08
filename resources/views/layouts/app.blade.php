@@ -43,8 +43,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background: rgb(0, 0, 255);">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(255, 165, 0);">
-                    <img src="{{ asset('uploads/images/images.jpeg') }}" width="200" alt="...">
+                <a class="navbar-brand" href="{{ url('/') }}" style="background: rgb(0, 0, 255);">
+                    <img src="{{ asset('uploads/images/imagesssss.png') }}" width="200" alt="...">
                 </a>
 
 
@@ -52,7 +52,7 @@
                     Equipe
                 </a>
 
-                <a class="navbar-brand" href="{{ url('/projetos') }}">
+                <a class="navbar-brand" href="{{ url('/projeto') }}">
                     Projetos
                 </a>
 
@@ -68,7 +68,7 @@
                 <a class="navbar-brand" href="{{ url('/niveis') }}">
                     Niveis
                 </a>
-                <a class="navbar-brand" href="{{ url('/professor_curso') }}">
+                <a class="navbar-brand" href="{{ url('/professorcurso') }}">
                     Professor de cada Curso
                 </a>
                 <a class="navbar-brand" href="{{ url('/professores') }}">
@@ -77,7 +77,7 @@
                 <a class="navbar-brand" href="{{ url('/users') }}">
                     Usuarios
                 </a>
-                <a class="navbar-brand" href="{{ url('/usuario_nivel') }}">
+                <a class="navbar-brand" href="{{ url('/usuarionivel') }}">
                     Nivel dos Usuarios
                 </a>
                 @endauth

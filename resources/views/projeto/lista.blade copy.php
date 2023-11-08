@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Lista de Projetos
-                        <a href="{{ url('projeto/create') }}" class="btn btn-success btn-sm float-end">
-                            Novo Projeto
+                        Projetos
+                        <a href="{{ url('projetos/create') }}" class="btn btn-success btn-sm float-end">
+                            Cadastrar Projeto
                         </a>
                     </div>
                     <div class="card-body">
@@ -24,7 +24,6 @@
                                     <th>Titulo</th>
                                     <th>Órgãos Proponentes</th>
                                     <th>Participantes</th>
-                                    <th>Dimensão</th>
                                     <th>Período / Duração</th>
                                     <th>Coordenação / Orientação</th>
                                     <th>Resumo do Projeto</th>
@@ -34,7 +33,7 @@
                                     <th>Objetivos Específicos</th>
                                     <th>Metodologia</th>
                                     <th>Recursos Orçamentários</th>
-                                    <th>Opções</th>
+                                    <th>Anexos</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,22 +42,22 @@
                                         <td>{{ $projeto->id }}</td>
                                         <td>{{ $projeto->titulo }}</td>
                                         <td>{{ $projeto->orgaos_proponentes }}</td>
-                                        <td>{{ $projeto->participantes }}</td>
                                         <td>{{ $projeto->dimensao }}</td>
                                         <td>{{ $projeto->periodo_duracao }}</td>
                                         <td>{{ $projeto->coordenacao_orientacao }}</td>
                                         <td>{{ $projeto->resumo_projeto }}</td>
                                         <td>{{ $projeto->justificativa }}</td>
                                         <td>{{ $projeto->fundamentacao_teorica }}</td>
-                                        <td>{{ $projeto->objetivos_geral }}</td>
-                                        <td>{{ $projeto->objetivos_especificos }}</td>
+                                        <td>{{ $projeto->objetivo_geral }}</td>
+                                        <td>{{ $projeto->objetivo_especificos }}</td>
                                         <td>{{ $projeto->metodologia }}</td>
                                         <td>{{ $projeto->recursos_orçamentos }}</td>
+                                        <!--<td>{{ $projeto->anexos }}</td>!-->
                                         <td>
-                                            <a href="{{ url('projeto/' . $projeto->id) }}" class="btn btn-primary btn-sm">
+                                            <a href="{{ url('projetos/' . $projeto->id) }}" class="btn btn-primary btn-sm">
                                                 Editar
                                             </a>
-                                            {!! Form::open(['method' => 'DELETE', 'url' => 'projeto/' . $projeto->id, 'style' => 'display:inline']) !!}
+                                            {!! Form::open(['method' => 'DELETE', 'url' => 'projetos/' . $projeto->id, 'style' => 'display:inline']) !!}
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                             {!! Form::close() !!}
                                         </td>
@@ -66,7 +65,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="3">
-                                            Não há itens para listar!
+                                            Não há projetos para listar!
                                         </td>
                                     </tr>
                                 @endforelse
@@ -75,12 +74,6 @@
                         <div class="pagination justify-content-center">
                             {{ $projetos->links() }}
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="{{ url('projeto/report') }}" target="_blank"
-                        class="btn btn-sm btn-warning">
-                        Relatório
-                    </a>
                     </div>
                 </div>
             </div>

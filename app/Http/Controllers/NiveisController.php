@@ -8,14 +8,13 @@ use Illuminate\Support\Facades\Redirect;
 
 class NiveisController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $niveis = Nivel::paginate(25);
@@ -39,20 +38,20 @@ class NiveisController extends Controller
         $nivel = new Nivel();
         $nivel->fill($request->all());
         if ($nivel->save()) {
-            $request->session()->flash('mensagem_sucesso', "Membro da equipe cadastrado!");
+            $request->session()->flash('mensagem_sucesso', "Nivel cadastrado!");
         } else {
-            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar membro da equipe!');
+            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar Nivel!');
         }
-        return Redirect::to('equipe/create');
+        return Redirect::to('niveis/create');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Nivel $id)
+    public function show($id)
     {
         $niveis = Nivel::findOrFail($id);
-        return view('nivel.formulario', compact('niveis'));
+        return view('niveis.formulario', compact('niveis'));
     }
 
     /**
@@ -66,9 +65,9 @@ class NiveisController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Nivel $curso_id)
+    public function update(Request $request, $nivel_id)
     {
-        $nivel = Nivel::find($curso_id);
+        $nivel = Nivel::findOrFail($nivel_id);
         $nivel->fill($request->all());
         if ($nivel->save()) {
             $request->session()->flash('mensagem_sucesso', "Nivel alterado!");
@@ -81,14 +80,16 @@ class NiveisController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Nivel $curso_id)
+    public function destroy(Request $request, $nivel_id)
     {
-        $nivel = Nivel::findOrFail($curso_id);
+        $nivel = Nivel::findOrFail($nivel_id);
         $lOk = true;
-        if ($lOk){
+        if ($lOk) {
             $nivel->delete();
-            $nivel->session()->flash('mensagem_sucesso',
-                'Nivel removido com sucesso');
+            $request->session()->flash(
+                'mensagem_sucesso',
+                'Nivel removido com sucesso'
+            );
             return Redirect::to('niveis');
         }
     }

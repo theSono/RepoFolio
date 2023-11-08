@@ -8,14 +8,13 @@ use Illuminate\Support\Facades\Redirect;
 
 class AcademicosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $academicos = Academico::paginate(25);
@@ -39,20 +38,20 @@ class AcademicosController extends Controller
         $academico = new Academico();
         $academico->fill($request->all());
         if ($academico->save()) {
-            $request->session()->flash('mensagem_sucesso', "Acadêmico Cadastrado!");
+            $request->session()->flash('mensagem_sucesso', "Academico cadastrado!");
         } else {
-            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar Acadêmico!');
+            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar Academico!');
         }
-        return Redirect::to('equipe/create');
+        return Redirect::to('academicos/create');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Academico $id)
+    public function show($id)
     {
         $academicos = Academico::findOrFail($id);
-        return view('academico.formulario', compact('academicos'));
+        return view('academicos.formulario', compact('academicos'));
     }
 
     /**
@@ -66,9 +65,9 @@ class AcademicosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Academico $academico_id)
+    public function update(Request $request, $academico_id)
     {
-        $academico = Academico::find($academico_id);
+        $academico = Academico::findOrFail($academico_id);
         $academico->fill($request->all());
         if ($academico->save()) {
             $request->session()->flash('mensagem_sucesso', "Academico alterado!");
@@ -81,14 +80,16 @@ class AcademicosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Academico $academico_id)
+    public function destroy(Request $request, $academico_id)
     {
         $academico = Academico::findOrFail($academico_id);
         $lOk = true;
-        if ($lOk){
+        if ($lOk) {
             $academico->delete();
-            $academico->session()->flash('mensagem_sucesso',
-                'Academico removido com sucesso');
+            $request->session()->flash(
+                'mensagem_sucesso',
+                'Academico removido com sucesso'
+            );
             return Redirect::to('academicos');
         }
     }

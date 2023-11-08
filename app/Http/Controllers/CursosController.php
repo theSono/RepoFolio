@@ -6,17 +6,15 @@ use App\Models\Curso;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Redirect;
 
-
 class CursosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $cursos = Curso::paginate(25);
@@ -37,29 +35,29 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        $academico = new Curso();
-        $academico->fill($request->all());
-        if ($academico->save()) {
-            $request->session()->flash('mensagem_sucesso', "Membro da equipe cadastrado!");
+        $curso = new Curso();
+        $curso->fill($request->all());
+        if ($curso->save()) {
+            $request->session()->flash('mensagem_sucesso', "Curso cadastrado!");
         } else {
-            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar membro da equipe!');
+            $request->session()->flash('mensagem_erro', 'Erro ao cadastrar Curso!');
         }
-        return Redirect::to('equipe/create');
+        return Redirect::to('cursos/create');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Curso $id)
+    public function show($id)
     {
         $cursos = Curso::findOrFail($id);
-        return view('academico.formulario', compact('cursos'));
+        return view('cursos.formulario', compact('cursos'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Curso $academico)
+    public function edit(Curso $curso)
     {
         //
     }
@@ -67,29 +65,31 @@ class CursosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Curso $curso_id)
+    public function update(Request $request, $curso_id)
     {
-        $academico = Curso::find($curso_id);
-        $academico->fill($request->all());
-        if ($academico->save()) {
+        $curso = Curso::findOrFail($curso_id);
+        $curso->fill($request->all());
+        if ($curso->save()) {
             $request->session()->flash('mensagem_sucesso', "Curso alterado!");
         } else {
             $request->session()->flash('mensagem_erro', 'Deu erro');
         }
-        return Redirect::to('cursos/' . $academico->id);
+        return Redirect::to('cursos/' . $curso->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Curso $curso_id)
+    public function destroy(Request $request, $curso_id)
     {
-        $academico = Curso::findOrFail($curso_id);
+        $curso = Curso::findOrFail($curso_id);
         $lOk = true;
-        if ($lOk){
-            $academico->delete();
-            $academico->session()->flash('mensagem_sucesso',
-                'Curso removido com sucesso');
+        if ($lOk) {
+            $curso->delete();
+            $request->session()->flash(
+                'mensagem_sucesso',
+                'Curso removido com sucesso'
+            );
             return Redirect::to('cursos');
         }
     }

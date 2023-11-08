@@ -29,7 +29,7 @@ class HomeController extends Controller
 
     public function exibirViewPublica()
     {
-        $equipe = Equipe::all();
-        return view('public_view.contato')->with('equipe', $equipe);
+        $equipes = Equipe::all();
+        return view('public_view.contato')->with('equipes', $equipes);
     }
 }

@@ -33,7 +33,6 @@
                         @else
                             {!! Form::open(['method' => 'POST', 'files' => 'True', 'url' => 'equipe']) !!}
                         @endif
-
                         {!! Form::label('nome', 'Nome') !!}
                         {!! Form::input('text', 'nome', null, [
                             'class' => 'form-control',
