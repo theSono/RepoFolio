@@ -40,7 +40,16 @@ Route::post('/projeto', [ProjetosController::class, 'store']);
 Route::patch('/projeto/{projeto_id}', [ProjetosController::class, 'update']);
 Route::delete('/projeto/{projeto_id}', [ProjetosController::class, 'deletar']);
 
-Route::resource('academico', AcademicosController::class);
+//Route::get('/equipe', [EquipeController::class, 'index']);
+//Route::get('/equipe/create', [EquipeController::class, 'create'])->name('equipe.create');
+//Route::get('/equipe/report', [EquipeController::class, 'showReport']);
+//Route::get('/equipe/{equipe_id}', [EquipeController::class, 'show'])->name('equipe.show');
+//Route::post('/equipe', [EquipeController::class, 'store']);
+//Route::patch('/equipe/{equipe_id}', [EquipeController::class, 'update']);
+//Route::delete('/equipe/{equipe_id}', [EquipeController::class, 'deletar']);
+
+
+Route::resource('equipe', EquipeController::class);
 Route::resource('curso', CursosController::class);
 Route::resource('equipe', EquipeController::class);
 Route::resource('nivel', NiveisController::class);

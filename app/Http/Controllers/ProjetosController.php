@@ -31,7 +31,7 @@ class ProjetosController extends Controller
 
     public function store(Request $request){
         $this->validate($request, ['image.*', 'mimes:jpeg, jpg, gif, png']);
-        $pasta = public_path('/uploads/projetos');
+        $pasta = public_path('/uploads/anexos');
         if ($request ->hasFile('anexos')){
             $foto = $request->file('anexos');
             $miniatura = Image::make($foto->path());
@@ -49,8 +49,6 @@ class ProjetosController extends Controller
         } else {
             $nomeArquivo = 'semfoto.jpg';
         }
-
-        $nomeArquivo = $this->uploadImagem($request);
 
         $projeto = new Projeto();
         $projeto->fill($request->all());
