@@ -118,7 +118,7 @@ class ProjetosController extends Controller
     public function showReport(){
         $projetos = Projeto::get();
         $imagem = 'uploads/anexos/semfoto.jpg';
-        $projeto = pathinfo($imagem, PATHINFO_EXTENSION);
+        $tipo = pathinfo($imagem, PATHINFO_EXTENSION);
         $data = file_get_contents($imagem);
         $base64 = base64_encode($imagem);
         $logo = base64_encode(file_get_contents(

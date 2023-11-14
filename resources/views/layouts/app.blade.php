@@ -37,6 +37,19 @@
     <script type="text/javascript" src="js/script.js"></script>
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        /* Adicione essas regras de estilo no cabeçalho do seu HTML ou em um arquivo de estilo externo */
+
+        .navbar-brand.custom-link {
+            color: #ffA500; /* Laranja em formato hexadecimal */
+        }
+
+        .navbar-brand.custom-link:hover {
+            color: #ff8C00; /* Laranja mais escuro quando o mouse está sobre o link */
+        }
+    </style>
+
 </head>
 
 <body>
@@ -48,38 +61,43 @@
                 </a>
 
 
-                <a class="navbar-brand" href="{{ url('/equipe') }}">
+                <a class="navbar-brand custom-link" href="{{ url('/equipe') }}">
                     Equipe
                 </a>
 
-                <a class="navbar-brand" href="{{ url('/projeto') }}">
+                <a class="navbar-brand custom-link" href="{{ url('/projeto') }}">
                     Projetos
                 </a>
 
                 @auth
 
-                <a class="navbar-brand" href="{{ url('/academicos') }}">
-                    Acadêmicos
-                </a>
+                    <a class="navbar-brand custom-link" href="{{ url('/academicos') }}">
+                        Acadêmicos
+                    </a>
 
-                <a class="navbar-brand" href="{{ url('/cursos') }}">
-                    Cursos
-                </a>
-                <a class="navbar-brand" href="{{ url('/niveis') }}">
-                    Niveis
-                </a>
-                <a class="navbar-brand" href="{{ url('/professorcurso') }}">
-                    Professor de cada Curso
-                </a>
-                <a class="navbar-brand" href="{{ url('/professores') }}">
-                    Professores
-                </a>
-                <a class="navbar-brand" href="{{ url('/users') }}">
-                    Usuarios
-                </a>
-                <a class="navbar-brand" href="{{ url('/usuarionivel') }}">
-                    Nivel dos Usuarios
-                </a>
+                    <a class="navbar-brand custom-link" href="{{ url('/cursos') }}">
+                        Cursos
+                    </a>
+
+                    <a class="navbar-brand custom-link" href="{{ url('/niveis') }}">
+                        Níveis
+                    </a>
+
+                    <a class="navbar-brand custom-link" href="{{ url('/professor_curso') }}">
+                        Professor de cada Curso
+                    </a>
+
+                    <a class="navbar-brand custom-link" href="{{ url('/professores') }}">
+                        Professores
+                    </a>
+
+                    <a class="navbar-brand custom-link" href="{{ url('/users') }}">
+                        Usuários
+                    </a>
+
+                    <a class="navbar-brand custom-link" href="{{ url('/usuarionivel') }}">
+                        Nível dos Usuários
+                    </a>
                 @endauth
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

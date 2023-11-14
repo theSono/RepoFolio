@@ -227,9 +227,9 @@
                     <h2 class="mb-4"><strong>Equipe GitCrafters</strong></h2>
                     <div class="row">
                         @forelse ($equipes as $equipe)
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-4"> <!-- Adicionei a classe mb-4 para criar espaço entre as colunas -->
                             <div class="card d-flex flex-column h-100">
-                                <img src="{{ asset('uploads/images/equipe/' . $equipe->foto) }}"
+                                <img src="{{ asset('uploads/equipe/' . $equipe->foto) }}"
                                     class="card-img-top img-fluid" alt="{{ $equipe->nome }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $equipe->nome }}</h5>
@@ -243,6 +243,7 @@
                         </div>
                         @endforelse
                     </div>
+
                 </section>
                 <!-- <h2 class="mb-4 text-center">Faça já seu projeto!</h2>
                 <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg p-3 mb-5 rounded">Fazer Projeto!</button>-->
