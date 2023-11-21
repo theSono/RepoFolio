@@ -48,7 +48,6 @@ Route::delete('/projeto/{projeto_id}', [ProjetosController::class, 'deletar']);
 //Route::patch('/equipe/{equipe_id}', [EquipeController::class, 'update']);
 //Route::delete('/equipe/{equipe_id}', [EquipeController::class, 'deletar']);
 
-
 Route::resource('equipe', EquipeController::class);
 Route::resource('academicos', AcademicosController::class);
 Route::resource('cursos', CursosController::class);
@@ -58,6 +57,10 @@ Route::resource('professores', ProfessoresController::class);
 Route::resource('professor_curso', ProfessorCursoController::class);
 Route::resource('user', ProfessorCursoController::class);
 Route::resource('usuarionivel', UsuarioNivelController::class);
+
+Route::get('contatos',[ContatosController::class, 'index']);
+
+Route::post('contatos',[ContatosController::class, 'enviar']);
 
 
 

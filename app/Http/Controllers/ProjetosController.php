@@ -123,7 +123,7 @@ class ProjetosController extends Controller
         $base64 = base64_encode($imagem);
         $logo = base64_encode(file_get_contents(
             public_path('/uploads/anexos/semfoto.jpg')));
-        $pdf = Pdf::loadView('reports.anexos', compact('anexos', 'logo'));
+        $pdf = Pdf::loadView('reports.projetos', compact('projetos', 'logo'));
 
         $pdf->setPaper('a4', 'portrait')
             ->setOptions(['dpi'=>150, 'defaultFone' => 'sans-serif'])
